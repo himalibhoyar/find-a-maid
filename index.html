@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"> 
 <head>
-<meta charset="UTF-8"> 
+<meta charset="UTF-8">
 <title>Finding a Maid, Made Easier with AI — Case Study</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -20,6 +20,7 @@
     --mono:'IBM Plex Mono', monospace;
   }
   *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
   body{
     margin:0;
     background:var(--bg);
@@ -213,36 +214,6 @@
   @media (max-width:900px){
     .page{padding:48px 24px 80px;}
     h1{font-size:30px;}
-  }
-  /* Responsive enhancements for narrower devices */
-  @media (max-width:700px){
-    .page{padding:36px 18px 64px;}
-    h1{font-size:26px;}
-    .intro, p.lead, .callout, .bullet-list, .flow-note, .method-note{max-width:100%;}
-    .meta-row{flex-direction:column; gap:12px; align-items:flex-start;}
-    .meta-item{flex:1 1 auto;}
-    .flow-diagram{flex-wrap:wrap; gap:12px; justify-content:center;}
-    .flow-col{align-items:center;}
-    .flow-arrow{display:none;}
-    .takeaway{flex-direction:column;}
-    .rice-table{display:block; overflow-x:auto;}
-    .screens-row{display:grid; grid-template-columns:repeat(auto-fit, minmax(220px, 1fr)); gap:18px; padding-bottom:8px;}
-    .screen-block{width:100%;}
-    .phone{width:100%; max-width:260px; height:auto; aspect-ratio:9/16; border-radius:24px;}
-    .phone .screen{border-radius:20px;}
-  }
-  @media (max-width:480px){
-    .page{padding:28px 14px 48px;}
-    h1{font-size:22px;}
-    .eyebrow{font-size:10px;}
-    .s-eyebrow{font-size:10px;}
-    .lead{font-size:15px;}
-    .callout{padding:14px;}
-    .flow-box{min-width:120px; padding:10px 12px; font-size:12px;}
-    .screen-caption .d{font-size:11px;}
-    .sbar{padding:10px 12px 2px;}
-    .app-head{font-size:13px;}
-    .btn{padding:9px; font-size:12px;}
   }
 </style>
 </head>
@@ -488,5 +459,5 @@
   </div>
 
 </div>
-</body>
+<script>document.querySelectorAll('section').forEach(s=>{s.style.opacity=0;s.style.transform='translateY(24px)';});const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.style.transition='all .6s ease';e.target.style.opacity=1;e.target.style.transform='translateY(0)';}}));document.querySelectorAll('section').forEach(s=>io.observe(s));</script></body>
 </html>
